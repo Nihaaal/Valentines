@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Rubik:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: "Merienda", cursive;
+        }
+    </style>
+</head>
+
+<body class="bg-sky-300">
+    <div class=" mt-48 mx-auto w-2/3 py-12 h-auto flex items-center justify-center rounded-lg" id="display">
+        <p class="text-center mx-auto font-bold text-xl "></p>
+    </div>
+    <div class="mx-auto text-center mt-12">
+        <button class="mt-4 text-center px-10 py-2 font-semibold bg-pink-100 rounded-md" type="button" id="btn-alert">
+            Click Me!</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById("btn-alert").addEventListener("click", function () {
+
+            function random_item(items) {
+                return items[Math.floor(Math.random() * items.length)]
+            }
+            const display = document.getElementById("display");
+            const items = [
+                'Falling for you was inevitable, it was way beyond my scope of control, the first time I saw you, I just knew, youre the person my heart has been craving this whole time.',
+                'I love you with every single ounce of my soul.',
+                'You mean absolutely everything to me, and I promise to do whatever’s in my power to make you the happiest person to walk this earth',
+                'This message is just to remind you that you mean the absolute world to me', 'I cherish every single waking moment with you, and your love has added an incomprehensible amount of happiness in my life.', 'Thank you for being my person <3', 'You are my home, my sanctuary, my comfort zone, my happy place, the only place I ever wanna be is with you.', 'Even though we’ve been through so much, you’re the person I’d want to go through it all with.', 'The difficult times will always be temporary my love, and we’re strong enough to make it through it all.', 'Our love is a forever kind of love <3', 'In the depths of our intertwined existence, I found solace.', 'I love you with everything I have and I’ll continue doing so for as long as the end of time.', 'Thank you for being nothing short of magical.', 'You’re my entire world and more <3', 'I just need you to know that when I’m with you, my mind is calm and my thoughts are quiet.', 'I feel safe when you’re by my side.', 'I love you so much more than words could ever say.','My heart is yours.','You’re the reason I have hope in my heart.','You’re the reason behind my smile.','You’re the reason I wanna be a better person.','I just want to remind you that I’m here for you every moment of everyday.','I’m not going anywhere, I’ve got you <3','As long as I’m alive and breathing, you’ll never have to go a day without feeling loved. I absolutely adore you.','You make me want to do better, to be a better person, to continue growing, evolving, healing and progressing.','You make me want to bring good into the world.','Being with you has made me softer, more patient, more kind and more loving.','You’ve changed me, in so many beautiful ways.','I didn’t know that communication could be this easy, laughter could fill up every day and love could feel this good.','You deserve to live the best life that anyone’s ever lived.','You deserve to feel the ache in your cheeks from smiling too hard <3','My love, you are the human definition of sunshine.'
+            ];
+            display.innerHTML = (random_item(items));
+        });
+    </script>
+</body>
+
+</html>
